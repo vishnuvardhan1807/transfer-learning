@@ -3,7 +3,6 @@ import tensorflow as tf
 
 # create a function to load and prepare images
 
-print("Hello world")
 def load_and_prep_image(filename, img_shape=224, scale=True):
     # 1.read the image
     img = tf.io.read_file(filename)
@@ -64,6 +63,7 @@ def make_confusion_matrix(y_true, y_pred, classes=None, figsize=(10, 10), text_s
         labels = classes
     else:
         labels = np.arange(cm.shape[0])
+
 
     # Label the axes
     ax.set(title="Confusion Matrix",
